@@ -21,8 +21,8 @@ export default function RootLayout({
   return (
     <ClerkProvider appearance={{ baseTheme: dark }} afterSignOutUrl="/">
       <html lang="en" suppressHydrationWarning>
-        <head />
-        <body>
+        {/* <head /> */}
+        <body className={inter.className}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
