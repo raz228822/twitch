@@ -18,7 +18,7 @@ export const Toggle = () => {
     return (
         <>
             {collapsed && (
-                <div className="w-full hiddne lg:flex items-center justify-center pt-4 mb-4">
+                <div className="w-full hidden lg:flex items-center justify-center pt-4 mb-4">
                     <Hint label={label} side="right" asChild>
                         <Button
                             onClick={onExpand}
