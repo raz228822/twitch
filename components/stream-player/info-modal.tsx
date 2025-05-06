@@ -76,7 +76,7 @@ export const InfoModal = ({
             </DialogTrigger>
             <DialogContent>
                 <DialogHeader>
-                    <DialogTitle>
+                    <DialogTitle className="flex justify-center">
                         Edit stream info 
                     </DialogTitle>
                 </DialogHeader>
