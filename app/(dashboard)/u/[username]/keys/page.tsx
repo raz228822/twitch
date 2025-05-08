@@ -1,5 +1,4 @@
 import { getSelf } from "@/lib/auth-service";
-import { Button } from "@/components/ui/button";
 import { getStreamByUserId } from "@/lib/stream-service";
 
 import { UrlCard } from "./_components/url-card";

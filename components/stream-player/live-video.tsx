@@ -3,7 +3,6 @@
 import { useRef, useState, useEffect } from "react"
 import { Participant, Track } from "livekit-client"
 import { useTracks } from "@livekit/components-react"
-import { useEventListener } from "usehooks-ts"
 
 import { FullScreenControl } from "./fullscreen-control"
 import { VolumeControl } from "./volume-control"
@@ -53,10 +52,10 @@ export const LiveVideo = ({
         }
     }
 
-    const handleFullScreenChange = () => {
-        const isCurrentlyFullscreen = document.fullscreenElement !== null;
-        setIsFullScreen(isCurrentlyFullscreen)
-    }
+    // const handleFullScreenChange = () => {
+    //     const isCurrentlyFullscreen = document.fullscreenElement !== null;
+    //     setIsFullScreen(isCurrentlyFullscreen)
+    // }
 
     // Replace the useEventListener line with this useEffect
     useEffect(() => {

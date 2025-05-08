@@ -1,8 +1,8 @@
 "use client"
 
 import { toast } from "sonner"
-import { startTransition, useTransition } from "react"
-import { Minus, MinusCircle } from "lucide-react"
+import { useTransition } from "react"
+import { MinusCircle } from "lucide-react"
 
 import { Hint } from "@/components/hint"
 import { onBlock } from "@/actions/block"
@@ -22,7 +22,7 @@ export const CommunityItem = ({
     participantName,
     participantIdentity
 }: CommunityItemProps) => {
-    const [isPending, setIsPending] = useTransition();
+    const [isPending, startTransition] = useTransition();
     const color = stringToColor(participantName || "")
     const isSelf = participantName === viewerName;
     const isHost = viewerName === hostName;
