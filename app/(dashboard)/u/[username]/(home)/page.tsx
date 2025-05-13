@@ -4,16 +4,15 @@ import { getUserByUsername } from "@/lib/user-service";
 import { StreamPlayer } from "@/components/stream-player";
 
 interface CreatePageProps {
-    params: {
-        username: string;
-    };
+    params: Promise<{ username: string }>;
 };
 
 const CreatePage = async ({
     params
 }: CreatePageProps) => {
+    const { username } = await params;
     const externalUser = await currentUser()
-    const user = await getUserByUsername(params.username)
+    const user = await getUserByUsername(username)
 
     if (!user || user.externalUserId !== externalUser?.id || !user.stream) {
         throw new Error("Unauthorized");
